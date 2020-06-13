@@ -62,11 +62,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             RotateView();
-            // the jump state needs to read here to make sure it is not missed
+            //the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            Debug.Log(m_Jump);
+               // Debug.Log(m_Jump);
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)

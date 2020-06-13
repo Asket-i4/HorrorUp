@@ -27,6 +27,8 @@ public class Drop : MonoBehaviour
         item.transform.parent = tempParent.transform;
     }
 
+    
+
     void OnMouseUp()
     {
         item.GetComponent<Rigidbody>().useGravity = true;
