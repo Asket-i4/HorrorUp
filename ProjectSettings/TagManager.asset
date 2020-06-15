@@ -7,7 +7,6 @@ TagManager:
   - player
   - endclip
   - clip
-  - pula
   layers:
   - Default
   - TransparentFX
