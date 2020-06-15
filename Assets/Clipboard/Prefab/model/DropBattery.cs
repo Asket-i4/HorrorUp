@@ -5,7 +5,7 @@ using UnityEngine;
 public class DropBattery : MonoBehaviour
 {
    
-
+  // Тут взятие батарейки 
     void OnTriggerStay(Collider otehr)
     {
         if (otehr.gameObject.tag == "player" )

@@ -14910,7 +14910,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 3843716869113251001}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -22734,15 +22734,15 @@ RectTransform:
   m_GameObject: {fileID: 840176275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.16244979, y: 0.43791753, z: 0.46393982}
   m_Children: []
   m_Father: {fileID: 582505315}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -812.6, y: 348.1}
+  m_SizeDelta: {x: 512.5, y: 436.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840176277
 MonoBehaviour:
@@ -22762,7 +22762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9e545bd0842725e45886eb729ca04234, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d358dd90d940b946b01ab65ce67f92c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -55438,6 +55438,7 @@ GameObject:
   - component: {fileID: 3843716869253658669}
   - component: {fileID: 3843716869253658670}
   - component: {fileID: 861265560}
+  - component: {fileID: 3843716869253658660}
   m_Layer: 0
   m_Name: NewFPSControl
   m_TagString: player
@@ -55615,6 +55616,19 @@ CharacterController:
   m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &3843716869253658660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3843716869253658657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbf3d1239109794e8c59e04ed46a3d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 3173795190786492026}
 --- !u!4 &3843716869253658668
 Transform:
   m_ObjectHideFlags: 0
@@ -56922,6 +56936,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9134314646565141122, guid: 729e965217fd8af48a785a7f1da63c14,
+        type: 3}
+      propertyPath: m_Name
+      value: Battery
+      objectReference: {fileID: 0}
     - target: {fileID: -1755354530114117637, guid: 729e965217fd8af48a785a7f1da63c14,
         type: 3}
       propertyPath: m_Size.x
@@ -56951,11 +56970,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: 0.86249423
-      objectReference: {fileID: 0}
-    - target: {fileID: 9134314646565141122, guid: 729e965217fd8af48a785a7f1da63c14,
-        type: 3}
-      propertyPath: m_Name
-      value: Battery
       objectReference: {fileID: 0}
     - target: {fileID: 9134314646565484580, guid: 729e965217fd8af48a785a7f1da63c14,
         type: 3}
