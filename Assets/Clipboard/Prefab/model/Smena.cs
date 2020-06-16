@@ -10,6 +10,8 @@ public class Smena : MonoBehaviour
     public GameObject Gun;
     public GameObject Axe;
 
+    public Animator axe;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class Smena : MonoBehaviour
                 Gun.SetActive(false);             
                 Axe.SetActive(false);
                 karutina = false;
+               
                 StartCoroutine(Stop());
             }
             if (Input.GetKeyDown(KeyCode.Alpha2) & GameObject.Find("NewFPSControl").GetComponent<Inventori>().Gun1)
@@ -38,6 +41,7 @@ public class Smena : MonoBehaviour
                 GameObject.Find("NewFPSControl").GetComponent<DragRigidbody>().enabled = false;
                 Axe.SetActive(false);
                 karutina = false;
+              
                 StartCoroutine(Stop());
             }
             if (Input.GetKeyDown(KeyCode.Alpha3) & GameObject.Find("NewFPSControl").GetComponent<Inventori>().Axe1)
@@ -47,6 +51,7 @@ public class Smena : MonoBehaviour
                 Gun.SetActive(false);
                 GameObject.Find("NewFPSControl").GetComponent<DragRigidbody>().enabled = false;
                 karutina = false;
+               
                 StartCoroutine(Stop());
             }
         }
