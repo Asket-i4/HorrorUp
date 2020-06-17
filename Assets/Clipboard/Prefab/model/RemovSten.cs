@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-[RequireComponent(typeof(AudioSource))]
+
 public class RemovSten : MonoBehaviour
 {
     public GameObject newsten;
     public GameObject Axe;
-    public AudioClip impact;
+
     int heal = 3;
     bool karutina = true;
     // Start is called before the first frame update
@@ -28,7 +28,6 @@ public class RemovSten : MonoBehaviour
     {
         if (otehr.gameObject.tag == "player" & Input.GetMouseButtonDown(0) & Axe.gameObject.active & karutina)
         {
-            AudioSource.PlayClipAtPoint(impact, transform.position);
             heal--;
             if (heal <= 0)
             {
