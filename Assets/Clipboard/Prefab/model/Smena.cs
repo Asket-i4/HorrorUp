@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Utility;
-
+[RequireComponent(typeof(AudioSource))]
 public class Smena : MonoBehaviour
 {
+    public AudioClip impact;
     bool position = true;
     bool karutina = true;
     public GameObject Gun;
@@ -31,7 +32,8 @@ public class Smena : MonoBehaviour
                 Gun.SetActive(false);             
                 Axe.SetActive(false);
                 karutina = false;
-               
+                AudioSource.PlayClipAtPoint(impact, transform.position);
+
                 StartCoroutine(Stop());
             }
             if (Input.GetKeyDown(KeyCode.Alpha2) & GameObject.Find("NewFPSControl").GetComponent<Inventori>().Gun1)
@@ -41,7 +43,7 @@ public class Smena : MonoBehaviour
                 GameObject.Find("NewFPSControl").GetComponent<DragRigidbody>().enabled = false;
                 Axe.SetActive(false);
                 karutina = false;
-              
+                AudioSource.PlayClipAtPoint(impact, transform.position);
                 StartCoroutine(Stop());
             }
             if (Input.GetKeyDown(KeyCode.Alpha3) & GameObject.Find("NewFPSControl").GetComponent<Inventori>().Axe1)
@@ -51,7 +53,7 @@ public class Smena : MonoBehaviour
                 Gun.SetActive(false);
                 GameObject.Find("NewFPSControl").GetComponent<DragRigidbody>().enabled = false;
                 karutina = false;
-               
+                AudioSource.PlayClipAtPoint(impact, transform.position);
                 StartCoroutine(Stop());
             }
         }
