@@ -9,6 +9,7 @@ public class Faer : MonoBehaviour
 	public int BulletForce = 5000;
 	public int Magaz = 30;
 	public int CountMagazin = 3;
+	public GameObject info;
 	public GameObject firelight;
 	public AudioClip Fire;
 	public AudioClip Reload;
@@ -16,13 +17,14 @@ public class Faer : MonoBehaviour
 	bool chek2 = true;
 	float a = 2;
 	Vector3 vec;
+	public GameObject slider;
 	public Animator Udar;
 	public Text enemy;
 	public Text magaz;
-	//void Start()
-	//{
-	//	InvokeRepeating("RunTimer", 10, 00001);
-	//}
+	void Start()
+	{
+	
+	}
 
 	//void RunTimer()
 	//{
@@ -38,6 +40,7 @@ public class Faer : MonoBehaviour
 		{
 			if (Input.GetMouseButtonDown(0) & Magaz > 0)
 			{
+				
 				Udar.SetBool("tazer", true);
 				Transform BulletInstance = (Transform)Instantiate(bullet, GameObject.Find("spawn").transform.position, Quaternion.identity);
 				firelight.SetActive(true);
@@ -47,7 +50,10 @@ public class Faer : MonoBehaviour
 				Magaz = Magaz - 1;
 				GetComponent<AudioSource>().PlayOneShot(Fire);
 				GetComponent<AudioSource>().PlayOneShot(Reload);
+				info.SetActive(true);
 				chek = false;
+				slider.SetActive(true);
+				enemy.text = "патроны - " + Magaz;
 				StartCoroutine(StopFaer());
 			}
 		}
@@ -67,7 +73,7 @@ public class Faer : MonoBehaviour
 			StartCoroutine(RePover()); // Это карутина мощешь взять для задержки переключения рук и шокера
 
 		}
-		enemy.text = "патроны - " + Magaz;
+		
 		
 	}
 
@@ -82,6 +88,8 @@ public class Faer : MonoBehaviour
 	{
 		yield return new WaitForSeconds(7);// Время ожидания в сек
 		chek = true;
+		slider.SetActive(false);
+		info.SetActive(false);
 	}
 }
 
