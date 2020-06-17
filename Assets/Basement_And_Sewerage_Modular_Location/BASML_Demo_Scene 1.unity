@@ -64974,7 +64974,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911939534469172919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.869, y: -23.265, z: -0.276}
+  m_LocalPosition: {x: 51.712, y: -23.265, z: -0.556}
   m_LocalScale: {x: 109.39, y: 4.96, z: 1}
   m_Children: []
   m_Father: {fileID: 5403748272411258859}
@@ -68172,7 +68172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scanlineIntensity: 98.72
-  scanlineWidth: 1
+  scanlineWidth: 4
 --- !u!1 &3843716869253658657
 GameObject:
   m_ObjectHideFlags: 0
@@ -74942,6 +74942,7 @@ GameObject:
   - component: {fileID: 8774389725670520037}
   - component: {fileID: 8774389725670520038}
   - component: {fileID: 8774389725670520039}
+  - component: {fileID: 8774389725670520040}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -74987,6 +74988,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310b5a79a9e61294ca8868865450c982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8774389725670520040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8774389725670520036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b65e4ba49e2cd4aac53f6e70e3566a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &8774389725675673244
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -74995,7 +75008,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8774389725670520036}
   m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.32138175
   m_Height: 1.8040301
