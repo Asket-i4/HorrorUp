@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PerlinNoiseData
   m_EditorClassIdentifier: 
   transformTarget: 1
-  amplitude: 80.42
-  frequency: 107.61
+  amplitude: 0.59
+  frequency: 1.64

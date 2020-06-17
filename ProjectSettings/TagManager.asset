@@ -8,6 +8,7 @@ TagManager:
   - endclip
   - clip
   - pula
+  - heart
   layers:
   - Default
   - TransparentFX
